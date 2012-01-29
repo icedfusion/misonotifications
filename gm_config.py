@@ -1,0 +1,1 @@
+/home/icedfusion/.mynotify/gm_config.py
