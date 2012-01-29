@@ -12,7 +12,7 @@ import json
 import urllib
 import os
 
-def genNotify(gn_title="Notification",gn_msg="this is the message",gn_duration=5):
+def genNotify(gn_title="",gn_msg="",gn_duration=5):
     #This will be the generic notification that will be called throughout
     #it will try to contact xbmc first...if it can't it will pass the message to pynotify.
     global os    
@@ -88,6 +88,7 @@ if Startup()>0:
     sys.exit()
 myid=login['user']['id']
 curnews=""
+curuser=""
 while True:
    try:
       feed=json.loads(gm.userHomeFeed(myid,1))
@@ -107,11 +108,12 @@ while True:
                   ep_number=""
          else:
             ep_number=""
-      newnews=username+ ": "+showname+" "+ep_number
-      if curnews!=newnews:
+      newnews=showname+" "+ep_number
+      if ( (curnews!=newnews) & (curuser != username) ):
          logger.info(newnews)
-         curnews = newnews#
-         genNotify(gn_title='Miso Notification',gn_msg=newnews)
+         curnews = newnews
+         curuser = username
+         genNotify(gn_title=curnews,gn_msg=username)
    except Exception, e:
       logger.error(" %s" %e)
    time.sleep(120)
