@@ -1,0 +1,6 @@
+2012-01-29 01:08:34,609 - INFO - trying to authenticate with miso to grab api handle
+2012-01-29 01:08:37,360 - INFO - logged in as icedfusion
+2012-01-29 01:08:38,050 - INFO - Chuck S05E13
+2012-01-29 01:08:38,051 - DEBUG - Sending xbmc msg via: GET "http://icedfusion:snoopy@192.168.1.2:8083/xbmcCmds/xbmcHttp?command=ExecBuiltIn(Notification(Chuck S05E13, d10nnis,7500))"
+2012-01-29 01:28:44,939 - INFO - Chuck S05E11
+2012-01-29 01:28:44,940 - DEBUG - Sending xbmc msg via: GET "http://icedfusion:snoopy@192.168.1.2:8083/xbmcCmds/xbmcHttp?command=ExecBuiltIn(Notification(Chuck S05E11, Rebelspawn,7500))"
